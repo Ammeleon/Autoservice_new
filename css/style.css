@@ -1,0 +1,68 @@
+body {
+	display: grid;
+	grid-template-areas:
+		"header header header"
+		"nav nav nav"
+		"sider content holder"
+		"footer footer footer";
+	grid-template-rows: 100px 30px 1fr 100px;
+	grid-template-columns: 180px 1fr 75px;
+	gap: 10px;
+	height: 100vh;
+	margin: 0;
+
+}
+
+@media all and (max-width: 575px) {
+	body {
+		grid-template-areas:
+			"header"
+			"nav"
+			"content"
+			"footer";
+		grid-template-rows: 80px 30px 1fr 80px;
+		grid-template-columns: 1fr;
+	}
+
+	.holder {
+		display: none;
+	}
+
+	.sider {
+		display: none;
+	}
+}
+
+.header,
+.nav,
+.sider,
+.content,
+.holder,
+.footer {
+	background-color: aqua;
+}
+
+.header {
+	grid-area: header;
+	align-self: right;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.sider {
+	grid-area: sider;
+}
+
+.content {
+	grid-area: content;
+}
+
+.holder {
+	grid-area: holder;
+}
+
+.footer {
+	grid-area: footer;
+}
